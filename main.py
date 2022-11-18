@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-parser = argparse.ArgumentParser("vttファイルからタイムコードを削ってtxtで保存する")
+parser = argparse.ArgumentParser("vtt(webvtt)ファイルからタイムコードを削ってtxtで保存する")
 parser.add_argument("-f", "--from_dir", type=str, help="変換対象ファイルが格納されているディレクトリ")
 parser.add_argument("-t", "--to", type=str, help="変換後ファイルの保存先ディレクトリ")
 args = parser.parse_args()
