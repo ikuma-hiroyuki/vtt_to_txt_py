@@ -6,7 +6,6 @@ parser.add_argument("-f", "--from_dir", type=str, help="変換対象ファイル
 parser.add_argument("-t", "--to", type=str, help="変換後ファイルの保存先ディレクトリ")
 args = parser.parse_args()
 
-base_dir = Path(__file__).absolute().parent
 vtt_dir = Path(args.from_dir)
 text_dir = Path(args.to)
 
