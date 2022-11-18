@@ -2,12 +2,13 @@ import argparse
 from pathlib import Path
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--from", type=str, help="変換対象ファイルが格納されているディレクトリ")
-parser.add_argument("-t", "--to", type=str, help="変換後ファイルの保存先")
+parser.add_argument("-f", "--from_dir", type=str, help="変換対象ファイルが格納されているディレクトリ")
+parser.add_argument("-t", "--to", type=str, help="変換後ファイルの保存先ディレクトリ")
+args = parser.parse_args()
 
 base_dir = Path(__file__).absolute().parent
-vtt_dir = base_dir / "vttfiles"
-text_dir = base_dir / "textfiles"
+vtt_dir = Path(args.from_dir)
+text_dir = Path(args.to)
 
 vtt_list = vtt_dir.glob("**/*.vtt")
 
